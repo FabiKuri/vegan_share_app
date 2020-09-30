@@ -5,15 +5,44 @@
       <%= form.text_field :sho_name, placeholder: "Shop Name" %>
       <%= form.text_area :content, placeholder: "text", rows: "10" %>
 
+
+
+
+
+      <div class="buttonbox">
+    
+        <div class="checkbox-conteiner">
+          <div class="button-weight-bold-text">
+            Food Menu
+          </div>
+          <div class="check-box">
+            <label><%= form.check_box :plan_base_menu %>Vegan
+            <%= form.check_box :plan_base_menu %>GlutenFree
+            <%= form.check_box :plan_base_menu %>Organic</label>
+          </div>
+        </div>
+        
+        <div class="button-conteiner">
+          <div class="button-weight-bold-text">
+            English Menu
+          </div>
+          <div class="radio-button">
+            <label><%= form.radio_button :food_menu, 'yes' %>YES
+            <%= form.radio_button :food_menu, 'no' %>NO</label>
+          </div>
+        </div>
+      </div>
+
+
       <div class="pulldown">
-      <div class="weight-bold-text">
-          Genre
-        </div>
-      <%= form.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"genre-select"}) %></span>
-      <div class="weight-bold-text">
-          Prefecture
-        </div>
-      <%= form.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"prefecture-select"}) %>
+        <div class="pulldown-weight-bold-text">
+            Genre
+          </div>
+        <%= form.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"genre-select"}) %></span>
+        <div class="pulldown-weight-bold-text">
+            Prefecture
+          </div>
+        <%= form.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"prefecture-select"}) %>
 
       </div>
 
