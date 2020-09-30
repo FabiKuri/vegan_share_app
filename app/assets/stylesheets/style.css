@@ -688,7 +688,7 @@ div.contents.row div.content_post p {
 
 .transition,
 a,
-form input[type="submit"] {
+form [type="submit"] {
   -moz-transition-property: all;
   -o-transition-property: all;
   -webkit-transition-property: all;
@@ -1056,6 +1056,22 @@ footer p {
 
 .search-form .search-btn {
   width: 10%;
+}
+/*  image and shop name */
+
+#item-image {
+  width:50%;
+}
+
+
+.click-upload {
+  display: flex;
+  justify-content: space-between;
+  height: 66px;
+}
+
+.shop-name {
+  width: 45%;
 }
 
 

@@ -2,8 +2,16 @@
   <div class="container">
     <h3>Share</h3>
     <%= form_with(model: @tweet, local: true) do |form| %>
-      <%= form.text_field :shop_name, placeholder: "Shop Name" %>
-      <%= form.text_area :content, placeholder: "text", rows: "10" %>
+
+    　<div class="click-upload">
+        
+      
+        <div class="shop-name">
+          <%= form.text_field :shop_name, placeholder: "Shop Name" %>
+        </div>
+        <%= form.file_field :image, id:"item-image" %>
+      </div>
+      <%= form.text_area :content, placeholder: "text", rows: "5" %>
 
 
 
