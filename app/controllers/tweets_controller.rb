@@ -7,5 +7,17 @@ class TweetsController < ApplicationController
   def new
     @tweet = Tweet.new 
   end 
+
+  def create
+    # binding.pry
+    Tweet.create(tweet_params)
+  end
+
+  private
   
+  def tweet_params
+    params.require(:tweet).permit(:shop_name, :content, :genre_id, 
+       :prefecture_id, :food_menu, plan_base_menu: [])
+  end
+
 end

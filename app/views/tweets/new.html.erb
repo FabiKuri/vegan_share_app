@@ -2,7 +2,7 @@
   <div class="container">
     <h3>Share</h3>
     <%= form_with(model: @tweet, local: true) do |form| %>
-      <%= form.text_field :sho_name, placeholder: "Shop Name" %>
+      <%= form.text_field :shop_name, placeholder: "Shop Name" %>
       <%= form.text_area :content, placeholder: "text", rows: "10" %>
 
 
@@ -16,9 +16,9 @@
             Food Menu
           </div>
           <div class="check-box">
-            <label><%= form.check_box :plan_base_menu %>Vegan
-            <%= form.check_box :plan_base_menu %>GlutenFree
-            <%= form.check_box :plan_base_menu %>Organic</label>
+            <label><%= form.check_box :plan_base_menu, {multiple: true}, "Vegan", nil %>Vegan
+            <%= form.check_box :plan_base_menu, {multiple: true}, "GlutenFlee", nil%>GlutenFree
+            <%= form.check_box :plan_base_menu, {multiple: true}, "Organic", nil %>Organic</label>
           </div>
         </div>
         
