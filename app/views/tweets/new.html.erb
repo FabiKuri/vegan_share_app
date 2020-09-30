@@ -1,10 +1,22 @@
 <div class="contents row">
   <div class="container">
-    <h3>投稿する</h3>
+    <h3>Share</h3>
     <%= form_with(model: @tweet, local: true) do |form| %>
       <%= form.text_field :sho_name, placeholder: "Shop Name" %>
       <%= form.text_area :content, placeholder: "text", rows: "10" %>
-      <%= form.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"genre-select"}) %>
+
+      <div class="pulldown">
+      <div class="weight-bold-text">
+          Genre
+        </div>
+      <%= form.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"genre-select"}) %></span>
+      <div class="weight-bold-text">
+          Prefecture
+        </div>
+      <%= form.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"prefecture-select"}) %>
+
+      </div>
+
       <%= form.submit "SEND" %>
     <% end %>
   </div>
