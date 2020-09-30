@@ -20,11 +20,11 @@
 | --------------- | ------- | ------------------------------ |
 | shop-name       | string  | null: false                    |
 | content         | text    | null: false                    |
-| genre_id        | integer | null: false                    |
-| plan_base_menu  | string  | null: false                    |
-| prefecture_id   | integer | null: false                    |
-| food_menu       | integer | null: false                    |
-| user_id         | integer | null: false, foreign_key: true |
+| genre-id        | integer | null: false                    |
+| plan-base-menu  | string  | null: false                    |
+| prefecture-id   | integer | null: false                    |
+| food-menu       | string | null: false                    |
+| user-id         | integer | null: false, foreign_key: true |
 
 
 ### Association
