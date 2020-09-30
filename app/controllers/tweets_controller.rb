@@ -17,7 +17,7 @@ class TweetsController < ApplicationController
   
   def tweet_params
     params.require(:tweet).permit(:shop_name, :content, :genre_id, 
-       :prefecture_id, :food_menu, plan_base_menu: [])
+       :prefecture_id, :food_menu, plan_base_menu: [], :image)
   end
 
 end
