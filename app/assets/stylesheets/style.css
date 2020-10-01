@@ -1182,7 +1182,7 @@ div.item-explain-box {
   height: 150px;
   overflow: scroll;
   white-space: pre-line;
-  line-height: 1;
+  line-height: 0.6;
 }
 
 /* submit buttom */
