@@ -1201,4 +1201,12 @@ div.item-explain-box {
   position: absolute;
   top: 20px;
   right: 20px;
+  text-align: center;
+}
+
+.more_list {
+  background-color: #a4da9f;
+  border-radius: 2px;
+  border: solid 1px white;
+  font-size: 15px;
 }
