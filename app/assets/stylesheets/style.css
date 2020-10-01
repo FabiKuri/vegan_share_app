@@ -1185,6 +1185,20 @@ div.item-explain-box {
   line-height: 1;
 }
 
+/* submit buttom */
 .form-submit {
   text-align: center;
+}
+
+
+/*  削除ボタン　*/
+
+.edit-button {
+  position: relative;
+}
+
+.more {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }

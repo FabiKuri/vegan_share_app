@@ -4,8 +4,20 @@
       <h1 class="main-shop-name">
         <%= tweet.shop_name %>
       </h1>
-      <div class='content_post'>
-        <%= image_tag tweet.image.variant(resize:'660x400') ,class:"item-box-img" %>
+      <div class="edit-button">
+        <div class='content_post'>
+          <%= image_tag tweet.image.variant(resize:'660x400') ,class:"item-box-img" %>
+        </div>
+
+
+        <div class="more">
+          <span><%= image_tag 'arrow_top.png' %></span>
+          <ul class="more_list">
+            <li>
+              <%= link_to '削除', "/tweets/#{tweet.id}", method: :delete %>
+            </li>
+          </ul>
+        </div>
       </div>
 
 
