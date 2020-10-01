@@ -8,16 +8,19 @@
         <div class='content_post'>
           <%= image_tag tweet.image.variant(resize:'660x400') ,class:"item-box-img" %>
         </div>
-
+    
 
         <div class="more">
           <span><%= image_tag 'arrow_top.png' %></span>
           <ul class="more_list">
+            <li  class="arrow-button">
+              <%= link_to 'View', tweet_path(tweet.id), method: :get %>
+            </li class="arrow-button">
             <li>
-              <%= link_to '編集', edit_tweet_path(tweet.id), method: :get %>
+              <%= link_to 'Edit', edit_tweet_path(tweet.id), method: :get %>
             </li>
             <li>
-              <%= link_to '削除', tweet_path(tweet.id), method: :delete %>
+              <%= link_to 'Delete', tweet_path(tweet.id), method: :delete %>
             </li>
           </ul>
         </div>
