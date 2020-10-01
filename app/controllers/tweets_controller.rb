@@ -13,11 +13,12 @@ class TweetsController < ApplicationController
     Tweet.create(tweet_params)
   end
 
+
   private
   
   def tweet_params
-    params.require(:tweet).permit(:shop_name, :content, :genre_id, 
-       :prefecture_id, :food_menu, plan_base_menu: [], :image)
+    params.require(:tweet).permit(:shop_name, :content, :genre_id, :image,
+       :prefecture_id, :food_menu, plan_base_menu: [])
   end
 
 end

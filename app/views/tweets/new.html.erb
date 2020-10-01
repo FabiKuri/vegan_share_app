@@ -1,7 +1,7 @@
 <div class="contents row">
   <div class="container">
     <h3>Share</h3>
-    <%= form_with(model: @tweet, local: true) do |form| %>
+    <%= form_with model: @tweet, local: true do |form| %>
 
     　<div class="click-upload">
         
@@ -11,10 +11,9 @@
         </div>
         <%= form.file_field :image, id:"item-image" %>
       </div>
-      <%= form.text_area :content, placeholder: "text", rows: "5" %>
 
-
-
+      
+      <%= form.text_area :content, placeholder: "text", rows: "5"%>
 
 
       <div class="buttonbox">
@@ -24,9 +23,9 @@
             Food Menu
           </div>
           <div class="check-box">
-            <label><%= form.check_box :plan_base_menu, {multiple: true}, "Vegan", nil %>Vegan
-            <%= form.check_box :plan_base_menu, {multiple: true}, "GlutenFlee", nil%>GlutenFree
-            <%= form.check_box :plan_base_menu, {multiple: true}, "Organic", nil %>Organic</label>
+            <label><%= form.check_box :plan_base_menu, {multiple: true}, 'Vegan', nil %>Vegan
+            <%= form.check_box :plan_base_menu, {multiple: true}, 'GlutenFree', nil%>GlutenFree
+            <%= form.check_box :plan_base_menu, {multiple: true}, 'Organic', nil %>Organic</label>
           </div>
         </div>
         
@@ -53,8 +52,8 @@
         <%= form.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"prefecture-select"}) %>
 
       </div>
-
-      <%= form.submit "SEND" %>
+      <div class="form-submit">
+      <%= form.submit "SEND" %></div>
     <% end %>
   </div>
 </div>

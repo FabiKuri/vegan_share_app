@@ -666,7 +666,7 @@ a {
 }
 
 a:hover {
-  color: #57C3E9;
+  color: #a4da9f;
 }
 
 .bold {
@@ -707,8 +707,8 @@ form [type="submit"] {
 header.header div.header__bar.row div.grid-6 a.post {
   padding: 8px 20px;
   font-size: 14px;
-  border: 2px solid #57C3E9;
-  color: #57C3E9;
+  border: 2px solid #23e50d;
+  color: #23e50d;
   font-weight: bold;
   text-align: center;
   border-radius: 3px;
@@ -717,8 +717,8 @@ header.header div.header__bar.row div.grid-6 a.post {
 
 .btn:hover,
 header.header div.header__bar.row div.grid-6 a.post:hover {
-  border-color: #9bdbf2;
-  color: #9bdbf2;
+  border-color: #a4da9f;
+  color: #a4da9f;
 }
 
 .title {
@@ -859,19 +859,19 @@ div.contents.row .new_user {
 }
 
 div.contents.row div.content_post {
-  margin: 20px 0;
-  padding: 30px;
+  margin: 10px 0;
+  padding: 15px;
   position: relative;
   height: 400px;
   color: #fff;
   background-size: cover;
   background-position: center center;
   border-radius: 3px;
-  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  /* box-shadow: 0 0 10px rgba(41, 41, 41, 0.2); */
 }
 
 div.contents.row div.content_post:after {
-  content: '';
+  /* content: ''; */
   position: absolute;
   top: 0;
   bottom: 0;
@@ -994,15 +994,18 @@ form textarea {
 }
 
 form input[type="submit"] {
-  background-color: #57C3E9;
+  background-color: #86d87b;
   border-radius: 20px;
   color: #fff;
   border: 0;
   font-size: 18px;
+  width: 150px;
+  margin-top: 10px;
 }
 
+
 form input[type="submit"]:hover {
-  background-color: #84d3ef;
+  background-color: #cae2c6;
 }
 
 .container {
@@ -1137,4 +1140,51 @@ footer p {
 
 label {
   display: flex;
+}
+
+
+
+/*  一覧画面　*/ 
+
+.tweet-box  {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail-table {
+  width:100%;
+  border: 2px solid rgb(39, 198, 66, 0.3);
+}
+
+
+.detail-item {
+  width: 40%;
+  text-align: left;
+  padding: 10px 0 0 70px;
+}
+
+.detail-value {
+  width: 60%;
+  padding: 10px 0 0 0;
+}
+
+.main-shop-name {
+  margin-top: 20px;
+  font-size: 35px;
+}
+
+div.item-explain-box {
+  margin: 20px 0 15px;
+  font-size: 20px;
+  width: 550px;
+  height: 200px;
+  overflow: scroll;
+  white-space: pre-line;
+  line-height: 1;
+}
+
+.form-submit {
+  text-align: center;
 }
