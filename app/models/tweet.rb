@@ -9,4 +9,5 @@ class Tweet < ApplicationRecord
   :prefecture_id, :food_menu, presence: true
 
   belongs_to :user
+  has_many :comments
 end
