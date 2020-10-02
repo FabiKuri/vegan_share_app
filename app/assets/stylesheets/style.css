@@ -1225,3 +1225,15 @@ div.item-explain-box {
   display: block;
 }
 
+.actions {
+  text-align: center;
+}
+
+.remember-me {
+  display: flex;
+  flex-direction: row;
+}
+
+.remember-box {
+  width: 30%;
+}
