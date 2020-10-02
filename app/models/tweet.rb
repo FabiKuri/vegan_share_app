@@ -7,4 +7,6 @@ class Tweet < ApplicationRecord
 
   validates :shop_name, :content, :genre_id, :plan_base_menu,
   :prefecture_id, :food_menu, presence: true
+
+  belongs_to :user
 end
