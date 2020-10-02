@@ -1197,7 +1197,7 @@ div.item-explain-box {
   position: relative;
 }
 
-.more {
+.more  {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -1209,6 +1209,7 @@ div.item-explain-box {
   border-radius: 2px;
   border: solid 1px white;
   font-size: 15px;
+  display: none;
 }
 
 .nickname {
@@ -1217,3 +1218,10 @@ div.item-explain-box {
   bottom: 0px;
   font-size: 15px;
 }
+
+
+.more:hover ul {
+  overflow: visible;
+  display: block;
+}
+

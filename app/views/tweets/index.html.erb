@@ -13,15 +13,17 @@
         <div class="more">
           <span><%= image_tag 'arrow_top.png' %></span>
           <ul class="more_list">
-            <li  class="arrow-button">
+            <li>
               <%= link_to 'View', tweet_path(tweet.id), method: :get %>
-            </li class="arrow-button">
-            <li>
-              <%= link_to 'Edit', edit_tweet_path(tweet.id), method: :get %>
             </li>
-            <li>
-              <%= link_to 'Delete', tweet_path(tweet.id), method: :delete %>
-            </li>
+            <% if user_signed_in? && current_user.id == tweet.user_id %>
+              <li>
+                <%= link_to 'Edit', edit_tweet_path(tweet.id), method: :get %>
+              </li>
+              <li> 
+                <%= link_to 'Delete', tweet_path(tweet.id), method: :delete %>
+              </li>
+             <% end %>
           </ul>
         </div>
       <span class="name nickname">
