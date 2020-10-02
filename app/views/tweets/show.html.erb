@@ -1,0 +1,53 @@
+<div class="contents row">
+ <div class="tweet-box">
+      <h1 class="main-shop-name">
+        <%= @tweet.shop_name %>
+      </h1>
+      <div class="edit-button">
+        <div class='content_post'>
+          <%= image_tag @tweet.image.variant(resize:'660x400') ,class:"item-box-img" %>
+        </div>
+    
+
+        <div class="more">
+          <span><%= image_tag 'arrow_top.png' %></span>
+          <ul class="more_list">
+            <li  class="arrow-button">
+              <%= link_to 'View', tweet_path(t@tweet.id), method: :get %>
+            </li class="arrow-button">
+            <li>
+              <%= link_to 'Edit', edit_tweet_path(@tweet.id), method: :get %>
+            </li>
+            <li>
+              <%= link_to 'Delete', tweet_path(@tweet.id), method: :delete %>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="item-explain-box">
+        <%= simple_format(@tweet.content) %>
+      </div>
+      <table class="detail-table">
+        <tbody>
+          <tr>
+            <th class="detail-item">Category:</th>
+            <td class="detail-value"><%= @tweet.plan_base_menu %></td>
+          </tr>
+          <tr>
+            <th class="detail-item">English Menu:</th>
+            <td class="detail-value"><%= @tweet.food_menu %></td>
+          </tr>
+          <tr>
+            <th class="detail-item">Genre:</th>
+            <td class="detail-value"><%= @tweet.genre.name %></td>
+          </tr>
+          <tr>
+            <th class="detail-item">Prefecture:</th>
+            <td class="detail-value"><%= @tweet.prefecture.name %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
