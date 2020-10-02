@@ -1,0 +1,69 @@
+<div class="contents row">
+ <div class="tweet-box">
+      <h1 class="main-shop-name">
+        <%= @tweet.shop_name %>
+      </h1>
+      <div class="edit-button">
+        <div class='content_post'>
+          <%= image_tag @tweet.image.variant(resize:'660x400') ,class:"item-box-img" %>
+        </div>
+        <% if user_signed_in? && current_user.id == @tweet.user_id %>
+          <div class="more">
+            <span><%= image_tag 'arrow_top.png' %></span>
+            <ul class="more_list">
+              <li>
+                <%= link_to 'Edit', edit_tweet_path(@tweet.id), method: :get %>
+              </li>
+              <li>
+                <%= link_to 'Delete', tweet_path(@tweet.id), method: :delete %>
+              </li>
+            </ul>
+          </div>
+        <% end %>
+      </div>
+      <div class="item-explain-box">
+        <%= simple_format(@tweet.content) %>
+      </div>
+      <table class="detail-table">
+        <tbody>
+          <tr>
+            <th class="detail-item">Category:</th>
+            <td class="detail-value"><%= @tweet.plan_base_menu %></td>
+          </tr>
+          <tr>
+            <th class="detail-item">English Menu:</th>
+            <td class="detail-value"><%= @tweet.food_menu %></td>
+          </tr>
+          <tr>
+            <th class="detail-item">Genre:</th>
+            <td class="detail-value"><%= @tweet.genre.name %></td>
+          </tr>
+          <tr>
+            <th class="detail-item">Prefecture:</th>
+            <td class="detail-value"><%= @tweet.prefecture.name %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="container">
+    <% if current_user %>
+      <%= form_with(model: [@tweet, @comment], local: true) do |form| %>
+        <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
+        <%= form.submit "SEND" %>
+      <% end %>
+    <% else %>
+      <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+    <% end %>
+    <div class="comments">
+      <h4>＜コメント一覧＞</h4>
+      <% if @comments %>
+        <% @comments.each do |comment| %>
+          <p>
+            <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+            <%= comment.text %>
+          </p>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
