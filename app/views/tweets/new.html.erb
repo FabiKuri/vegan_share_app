@@ -1,59 +1,6 @@
 <div class="contents row">
   <div class="container">
     <h3>Share</h3>
-    <%= form_with model: @tweet, local: true do |form| %>
-
-    　<div class="click-upload">
-        
-      
-        <div class="shop-name">
-          <%= form.text_field :shop_name, placeholder: "Shop Name" %>
-        </div>
-        <%= form.file_field :image, id:"item-image" %>
-      </div>
-
-      
-      <%= form.text_area :content, placeholder: "text", rows: "3"%>
-
-
-      <div class="buttonbox">
-    
-        <div class="checkbox-conteiner">
-          <div class="button-weight-bold-text">
-            Food Menu
-          </div>
-          <div class="check-box">
-            <label><%= form.check_box :plan_base_menu, {multiple: true}, 'Vegan', nil %>Vegan
-            <%= form.check_box :plan_base_menu, {multiple: true}, 'GlutenFree', nil%>GlutenFree
-            <%= form.check_box :plan_base_menu, {multiple: true}, 'Organic', nil %>Organic</label>
-          </div>
-        </div>
-        
-        <div class="button-conteiner">
-          <div class="button-weight-bold-text">
-            English Menu
-          </div>
-          <div class="radio-button">
-            <label><%= form.radio_button :food_menu, 'yes' %>YES
-            <%= form.radio_button :food_menu, 'no' %>NO</label>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="pulldown">
-        <div class="pulldown-weight-bold-text">
-            Genre
-          </div>
-        <%= form.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"genre-select"}) %></span>
-        <div class="pulldown-weight-bold-text">
-            Prefecture
-          </div>
-        <%= form.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"prefecture-select"}) %>
-
-      </div>
-      <div class="form-submit">
-      <%= form.submit "SEND" %></div>
-    <% end %>
+   <%= render partial: "form", locals: { tweet: @tweet } %>
   </div>
 </div>
