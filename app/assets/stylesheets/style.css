@@ -1210,3 +1210,10 @@ div.item-explain-box {
   border: solid 1px white;
   font-size: 15px;
 }
+
+.nickname {
+  position: absolute;
+  right: 20px;
+  bottom: 0px;
+  font-size: 15px;
+}
