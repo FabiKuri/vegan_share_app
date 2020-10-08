@@ -7,6 +7,7 @@
 | nickname            | string | null: false |
 | email               | string | null: false |
 | password            | string | null: false |
+| user-id             | integer | null: false |
 
 
 ### Association
