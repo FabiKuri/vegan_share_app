@@ -12,21 +12,36 @@
 ### Association
 
 - has_many :items
+- has_many :comments
 
 
-## itemsテーブル
+## ｔweetテーブル
 
 | column          | type    | options                        |
 | --------------- | ------- | ------------------------------ |
 | shop-name       | string  | null: false                    |
 | content         | text    | null: false                    |
 | genre-id        | integer | null: false                    |
-| plan-base-menu  | integer  | null: false                    |
+| plan-base-menu  | integer | null: false                    |
 | prefecture-id   | integer | null: false                    |
 | food-menu       | integer | null: false                    |
-| user-id         | integer | null: false, foreign_key: true |
 
 
 ### Association
 
+- belongs_to :user
+- has_many :comments
+
+## commentテーブル
+
+| column              | type    | options     |
+| ------------------- | ------- | ----------- |
+| user-id             | integer | null: false |
+| tweet-id            | integer | null: false |
+| text                | text    | null: false |
+
+
+### Association
+
+- belongs_to :tweet 
 - belongs_to :user
