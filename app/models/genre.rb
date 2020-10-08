@@ -14,7 +14,9 @@ class Genre < ActiveHash::Base
     { id: 11, name: 'Fast Food' },
     { id: 12, name: 'Desserts' },
     { id: 13, name: 'Cafe' },
-    { id: 14, name: 'Bakery' },
-    { id: 15, name: 'Other' }
+    { id: 14, name: 'Drinks' },
+    { id: 15, name: 'Bakery' },
+    { id: 16, name: 'Salads' },
+    { id: 17, name: 'Other' }
   ]
   end
